@@ -1,0 +1,39 @@
+:root {
+  --color-primario: #ffffff;
+}
+.title--figures {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  color: var(--color-primario);
+}
+.section-square--container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+  width: 30%;
+  height: 25%;
+  margin: 0;
+  padding: 0;
+  color: var(--color-primario);
+}
+.section-square--container form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.container-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 20px 0 0 0;
+  padding: 0;
+  text-align: center;
+}
+.container-buttons button {
+  width: 30%;
+  height: 50px;
+}
