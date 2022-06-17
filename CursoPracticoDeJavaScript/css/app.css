@@ -1,3 +1,6 @@
+:root {
+  --color-primario: #ffffff;
+}
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -98,6 +101,7 @@ header p a {
 }
 .section--link-page ul li {
   margin-right: 1rem;
+  margin-top: 30px;
   font-size: 2rem;
   list-style: none;
 }
@@ -110,4 +114,11 @@ header p a {
 }
 .section--link-page ul li a:hover {
   color: #2563eb;
+}
+.link-main--page {
+  margin-top: 1%;
+  color: white;
+}
+.link-main--page a {
+  color: rgb(223, 68, 240);
 }

@@ -107,3 +107,39 @@ const calcularAreaCuadrado = () => {
   const area = areaCuadrado(value);
   alert(area);
 };
+
+// Triangulo Isosceles
+const calcularPerimetroTrianguloIso = () => {
+  const lado1 = document.getElementById('ladoA');
+  const lado2 = document.getElementById('ladoB');
+  const lado3 = document.getElementById('ladoC');
+  const value1 = parseFloat(lado1.value);
+  const value2 = parseFloat(lado2.value);
+  const value3 = parseFloat(lado3.value);
+  const perimetro = 2 * value2 + value3;
+  alert(perimetro);
+};
+
+const calcularAreaTrianguloIso = () => {
+  const lado1 = document.getElementById('ladoA');
+  const lado2 = document.getElementById('ladoB');
+  const base = document.getElementById('ladoC');
+  const ilado1 = parseFloat(lado1.value);
+  const ilado2 = parseFloat(lado2.value);
+  const iBase = parseFloat(base.value);
+
+  if (ilado1 != ilado2) {
+    alert('Los lados deben ser iguales');
+  } else {
+    const smallLado2 = iBase / 2;
+    const smallBase = ilado1;
+
+    const smallLado2Cuadrado = smallLado2 * smallLado2;
+    const smallBaseCuadrado = smallBase * smallBase;
+
+    let smallLado1 = Math.sqrt(smallBaseCuadrado - smallLado2Cuadrado);
+
+    const bigAltura = smallLado1;
+    alert(`La altura del triangulo es: ${bigAltura}mtr^2`);
+  }
+};

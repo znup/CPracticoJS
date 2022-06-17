@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Porcentajes y Descuentos</title>
+    <link rel="stylesheet" href="../../css/app.css" />
+    <link rel="stylesheet" href="../css/descuentos.css" />
+    <link
+      rel="stylesheet"
+      href="../../Porcentaje_Y_Descuentos/css/descuentos.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h2 class="title--figures">Porcentajes y Descuentos</h2>
+      <p>Taller práctico de JS</p>
+    </header>
+    <section class="wrapper-container">
+      <form class="container__form">
+        <label for="InputCant">Escribe la cantidad</label>
+        <input id="InputCant" type="number" autocomplete="off" />
+
+        <label for="InputPercentage">Escribe el porcentaje</label>
+        <input id="InputPercentage" type="number" autocomplete="off" />
+        <button type="button" onclick="buttonDiscount()">
+          Calcular el porcentaje
+        </button>
+        <button type="reset">Limpiar</button>
+        <p id="ShowResult"></p>
+      </form>
+      <span class="link-main--page"
+        >Regresar a <a href="/CursoPracticoDeJavaScript/">inicio</a></span
+      >
+    </section>
+    <script src="../js/descuentos.js" type="text/javascript"></script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figuras geométricas</title>
+    <link rel="stylesheet" href="../../css/normalize.css" />
+    <link rel="stylesheet" href="../../css/app.css" />
+    <link rel="stylesheet" href="../css/figuras.css" />
+  </head>
+  <body>
+    <header>
+      <h2 class="title--figures">Figuras geométricas</h2>
+      <p>Taller práctico de JS</p>
+    </header>
+    <section class="section-square--container">
+      <form>
+        <ul>
+          <li>
+            <div class="container--inputs">
+              <label form="inputCuadrado">
+                Escribe la medida del cuadrado
+              </label>
+              <input id="inputCuadrado" type="number" />
+            </div>
+            <div class="container-buttons">
+              <button type="button" onclick="calcularPerimetroCuadrado()">
+                Calcular el perímetro
+              </button>
+              <button type="button" onclick="calcularAreaCuadrado()">
+                Calcular el área
+              </button>
+            </div>
+          </li>
+          <li>
+            <h5>Escribe la medida del triángulo isósceles</h5>
+            <div class="container--inputs">
+              <label form="ladoA"> Escribe lado A</label>
+              <input id="ladoA" type="number" />
+              <label form="ladoB"> Escribe lado B</label>
+              <input id="ladoB" type="number" />
+              <label form="ladoC"> Escribe lado C</label>
+              <input id="ladoC" type="number" />
+            </div>
+            <div class="container-buttons">
+              <button type="button" onclick="calcularPerimetroTrianguloIso()">
+                Calcular el perímetro
+              </button>
+              <button type="button" onclick="calcularAreaTrianguloIso()">
+                Calcular el área
+              </button>
+            </div>
+          </li>
+        </ul>
+      </form>
+    </section>
+
+    <script src="../js/figuras.js"></script>
+  </body>
+</html>

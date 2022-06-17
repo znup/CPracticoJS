@@ -12,7 +12,7 @@
   align-items: center;
   align-content: center;
   justify-content: space-evenly;
-  width: 30%;
+  width: 50%;
   height: 25%;
   margin: 0;
   padding: 0;
@@ -23,6 +23,18 @@
   flex-direction: column;
   width: 100%;
 }
+.section-square--container form ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.container--inputs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .container-buttons {
   display: flex;
   flex-direction: row;
@@ -34,6 +46,6 @@
   text-align: center;
 }
 .container-buttons button {
-  width: 30%;
+  width: 43%;
   height: 50px;
 }
