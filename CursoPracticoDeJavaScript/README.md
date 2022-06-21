@@ -15,7 +15,7 @@
 
 #
 
-## Taller #1: Porcentajes y descuentos
+## Taller #2: Porcentajes y descuentos
 
 #
 
@@ -26,7 +26,7 @@
 
 #
 
-## Taller #2: Promedio Moda y Mediana
+## Taller #3: Promedio Moda y Mediana
 
 #
 
