@@ -1,0 +1,52 @@
+#!/usr/bin/env node
+
+const { exec } = require('child_process');
+const path = require("path");
+const fs = require("fs");
+const chalk = require('chalk');
+const packagePath = path.join(process.cwd(), 'package.json');
+
+
+const package = require(packagePath);
+
+const checkRemoteVersion = (key, cb) => {
+  exec("npm view " + key + " version", (error, stdout, stderr) => {
+    if (error) {
+      //console.error(`exec error: ${error}`);
+      console.error(chalk.bold.red(` ${error}`));
+      process.exit();
+    }
+    const latestV = stdout;
+    if (cb) {
+      cb(latestV);
+    }
+  });
+};
+
+const checker = (key, currentVer) => {
+  checkRemoteVersion(key, (ver) => {
+    ver = ver.trim();
+    if (currentVer.lastIndexOf(ver) >= 0) {
+      console.log(chalk.bold.green(`${key} ${currentVer}`, chalk.gray('----->'), chalk.green(` is the latest.
+`)
+));
+    } else {
+      console.log(chalk.bold.red(`${key} ${currentVer}  is outdated.`), chalk.gray('----->'),
+        chalk.bold.red(` the latest version is ${ver}
+`));
+    }
+  });
+};
+
+const { dependencies, devDependencies } = package;
+
+for (const key in (dependencies || {})) {
+  checker(key, dependencies[key]);
+}
+
+for (const key in (devDependencies || {})) {
+  checker(key, devDependencies[key]);
+}
+console.log("Check the latest versions...");
+
+
