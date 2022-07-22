@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Array</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      const products = [
+        { tittle: 'Burger', price: 130 },
+        { tittle: 'Pizza', price: 100 },
+        { tittle: 'H0ot', price: 100 },
+      ];
+      const app = document.getElementById('app');
+      products.forEach((product) => {
+        app.innerHTML += `
+          <li>${product.tittle} - ${product.price}</li>
+        `;
+      });
+    </script>
+    <!-- <script>
+      const userTasks = [
+        { title: 'US-1', done: true },
+        { title: 'US-2', done: false },
+        { title: 'US-3', done: false },
+        { title: 'US-4', done: false },
+        { title: 'US-5', done: false },
+      ];
+      const appTask = document.getElementById('app');
+      userTasks.forEach((userTask) => {
+        app.innerHTML += `
+          <li>
+            <input
+              type='checkbox'
+              id='${userTask.title}'
+              name="${userTask.title}"
+              ${userTask.done && 'checked'}
+            />
+            <label for="${userTask.title}">${userTask.title}</label>
+          </li>
+        `;
+      });
+    </script> -->
+  </body>
+</html>
